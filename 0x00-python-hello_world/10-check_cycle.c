@@ -12,7 +12,8 @@ int check_cycle(listint_t *list)
 	int i = 0, j, array_size = 32;
 	listint_t **arr = malloc(sizeof(listint_t *) * array_size);
 
-
+	if (!arr)
+	return (-1);
 	while (list != NULL)
 	{
 		*(arr + i) = list;
