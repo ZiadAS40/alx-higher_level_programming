@@ -10,17 +10,16 @@
 int check_cycle(listint_t *list)
 {
 	int i = 0, j, array_size = 32;
-	listint_t *temp = list;
 	listint_t **arr = malloc(sizeof(listint_t *) * array_size);
 
 
-	while (temp != NULL)
+	while (list != NULL)
 	{
-		*(arr + i) = temp;
-		temp = temp->next;
+		*(arr + i) = list;
+		list = list->next;
 		for (j = 0; j <= i; j++)
 		{
-			if (*(arr + j) == temp)
+			if (*(arr + j) == list)
 			{
 				free(arr);
 				return (1);
