@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def fizzbuzz():
-    list = list(range(1, 101))
-    for n in list:
+    arr = list(range(1, 101))
+    for n in arr:
         if n % 3 == 0 and n % 5 == 0:
             print("FizzBuzz ", end='')
         elif n % 3 == 0:
