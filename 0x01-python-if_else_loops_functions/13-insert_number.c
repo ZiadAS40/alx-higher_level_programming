@@ -1,5 +1,5 @@
 #include "lists.h"
-
+listint_t *add_nodeint(listint_t **head, const int n);
 /**
  * insert_node - insert a number in a sorted list
  * @head: pointer to pointer to the first node.
@@ -35,4 +35,25 @@ listint_t *insert_node(listint_t **head, int number)
 	}
 	add_nodeint_end(head, number);
 	return (*head);
+}
+
+/**
+ * add_nodeint - adds a new node at the beginning of a listint_t list
+ * @head: pointer to a pointer of the start of the list
+ * @n: integer to be included in node
+ * Return: address of the new element or NULL if it fails
+ */
+listint_t *add_nodeint(listint_t **head, const int n)
+{
+	listint_t *new;
+
+	new = malloc(sizeof(listint_t));
+	if (new == NULL)
+		return (NULL);
+
+	new->n = n;
+	new->next = *head;
+	*head = new;
+
+	return (new);
 }
