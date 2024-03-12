@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-letters = list(range(97, 122))
-ascii_char = [chr(letter) for letter in letters]
-print(''.join(ascii_char), end='')
+letters = list(range(97, 123))
+for letter in letters:
+    print("{}".format(chr(letter)), end='')
