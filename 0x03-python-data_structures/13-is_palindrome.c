@@ -10,7 +10,7 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *tmp = *head;
 	int i = 0, buffer_size = 128;
-	int *buffer = malloc(sizeof(int) * buffer_size);
+	int *buffer = malloc(sizeof(int) * buffer_size), *tmp_buffer;
 
 	if (!buffer)
 		return (-1);
@@ -22,9 +22,13 @@ int is_palindrome(listint_t **head)
 		if (i >= buffer_size)
 		{
 			buffer_size += 128;
-			buffer = realloc(buffer, sizeof(int) * buffer_size);
-			if (!buffer)
+			tmp_buffer = realloc(buffer, sizeof(int) * buffer_size);
+			if (!tmp_buffer)
+			{
+				free(buffer);
 				return (-1);
+			}
+			buffer = tmp_buffer;
 		}
 	}
 	i--;
@@ -35,5 +39,6 @@ int is_palindrome(listint_t **head)
 		(*head) = (*head)->next;
 		i--;
 	}
+	free(buffer);
 	return (1);
 }
