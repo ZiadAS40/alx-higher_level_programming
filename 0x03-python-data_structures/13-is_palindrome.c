@@ -30,7 +30,6 @@ int is_palindrome(listint_t **head)
 	i--;
 	while ((*head) != NULL)
 	{
-		printf("%d -> %d\n", (*head)->n, buffer[i]);
 		if ((*head)->n != buffer[i])
 			return (0);
 		(*head) = (*head)->next;
