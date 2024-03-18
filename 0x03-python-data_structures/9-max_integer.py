@@ -2,7 +2,7 @@
 def max_integer(my_list=[]):
     buffer = 0
     if len(my_list) == 0:
-        return None
+        return 0
     elif len(my_list) == 1:
         return my_list[0]
     for i in range(0, len(my_list)):
