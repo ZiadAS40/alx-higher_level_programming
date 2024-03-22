@@ -4,7 +4,8 @@ def roman_to_int(roman_string):
     result = 0
     skip_next = False
     for i in range(0, len(roman_string)):
-        if skip_next:
+        if skip_next == True:
+            skip_next = False
             continue
         if i != len(roman_string) - 1:
             if rA[roman_string[i]] < rA[roman_string[i + 1]]:
@@ -15,5 +16,4 @@ def roman_to_int(roman_string):
                 skip_next = False
         else:
             result += rA[roman_string[i]]
-            skip_next = False
     return result
