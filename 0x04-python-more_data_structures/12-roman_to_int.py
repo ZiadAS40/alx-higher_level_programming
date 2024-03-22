@@ -3,8 +3,12 @@ def roman_to_int(roman_string):
     rA = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
     result = 0
     skip_next = False
+    if roman_string is None:
+        return 0
+    if not isinstance(roman_string, str):
+        return 0
     for i in range(0, len(roman_string)):
-        if skip_next == True:
+        if skip_next is True:
             skip_next = False
             continue
         if i != len(roman_string) - 1:
