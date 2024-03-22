@@ -7,4 +7,5 @@ def best_score(a_dictionary):
                 score = a_dictionary[v]
                 theBest = v
         return theBest
-    return None
+    else:
+        return None
