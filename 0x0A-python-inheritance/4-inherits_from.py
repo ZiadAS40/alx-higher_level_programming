@@ -2,7 +2,6 @@
 """checks if it is only a subclass"""
 
 
-
 def inherits_from(obj, a_class):
     """perform the checks"""
     if isinstance(obj, a_class):
