@@ -4,6 +4,6 @@ a geometry class
 """
 
 
-class Geometry:
+class BaseGeometry:
     """for now it just an empty call :)"""
     pass
