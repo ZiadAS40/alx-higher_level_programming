@@ -17,4 +17,3 @@ for arg in sys.argv[1:]:
 filename = "add_item.json"
 save_to_json_file(myList, filename)
 data = load_from_json_file(filename)
-print(data, end="")
