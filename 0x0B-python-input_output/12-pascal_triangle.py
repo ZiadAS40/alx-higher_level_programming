@@ -4,7 +4,7 @@
 
 def pascal_triangle(n):
     """immplementing the algorithm for pascal traingle"""
-    if n > 1:
+    if n >= 1:
         t_list = [1]
     else:
         return []
