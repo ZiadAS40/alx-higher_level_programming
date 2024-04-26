@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-from models.base import Base
-
 """The Rectangle class inherits from the Base class"""
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -9,7 +8,14 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """
-        initiate the Rectangular instance
+        Initialize a Rectangle instance with width,height, x and y coordinates.
+
+        Args:
+            width (int): The width of the rectangle.
+            height (int): The height of the rectangle.
+            x (int, optional): The x-coordinate of the rectangle.Defaults to 0.
+            y (int, optional): The y-coordinate of the rectangle.Defaults to 0.
+            id (optional): An optional id of the rectangle. Defaults to None.
         """
         self.width = width
         self.height = height
@@ -89,7 +95,16 @@ class Rectangle(Base):
                 .format(self.id, self.x, self.y, self.width, self.height))
 
     def update(self, *args, **kwargs):
-        """update the recangular class"""
+        """Update the Rectangle.
+        Args:
+            *args (ints): New attribute values.
+                - 1st argument represents id attribute
+                - 2nd argument represents width attribute
+                - 3rd argument represent height attribute
+                - 4th argument represents x attribute
+                - 5th argument represents y attribute
+            **kwargs (dict): New key/value pairs of attributes.
+        """
         attributes = ['id', 'width', 'height', 'x', 'y']
         if args:
             for attr, value in zip(attributes, args):
