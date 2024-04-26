@@ -3,11 +3,12 @@
 
 
 class Base:
-    """define the base class with the
+    """
+    define the base class with the
     bultin __init___ and the private
-    attr __nb_objects"""
+    attr __nb_objects
+    """
 
-    
     __nb_objects = 0
 
     def __init__(self, id=None):
@@ -21,8 +22,3 @@ class Base:
     @property
     def nb_objects(self):
         return self.__nb_objects
-    
-    @nb_objects.setter
-    def nb_objects(self, value):
-        self.__nb_objects = value
-    
