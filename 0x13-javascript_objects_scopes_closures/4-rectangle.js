@@ -17,9 +17,9 @@ module.exports = class Rectangle {
   }
 
   rotate () {
-    const Lvar = this.width;
+    const swp = this.width;
     this.width = this.height;
-    this.height = Lvar;
+    this.height = swp;
   }
 
   double () {
