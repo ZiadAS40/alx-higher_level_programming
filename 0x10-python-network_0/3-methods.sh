@@ -1,3 +1,3 @@
-#!/bin/bash
-#takes an URL and shows the Allowed OPTIONS
-curl -sI -X OPTIONS "$1" | grep "Allow:" | cut -d " " -f 2-
+#!/usr/bin/env bash
+# displays the options that the server accept
+curl -s -X OPTIONS "$1"
