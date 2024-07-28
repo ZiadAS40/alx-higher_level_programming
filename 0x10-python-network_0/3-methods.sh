@@ -1,3 +1,3 @@
 #!/bin/bash
 # displays the options that the server accept
-curl -s -X OPTIONS "$1"
+curl -s -I -X OPTIONS "$1" | grep -i "Allow:" | cut -d' ' -f2-
